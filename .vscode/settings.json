@@ -1,5 +1,5 @@
 {
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/**"],
   "files.autoSave": "afterDelay",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
