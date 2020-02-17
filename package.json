@@ -1,0 +1,26 @@
+{
+  "name": "desenvolvimento-web-02-01",
+  "version": "1.0.0",
+  "description": "Revisão JavaScript, Node.js e NPM",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm restart && nodemon --exec sucrase-node src/index.js",
+    "restart": "touch src/index.js",
+    "test": "mocha --require sucrase/register test/**/*.js",
+    "lint": "eslint src/**/*.js test/**/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "mocha": "^7.0.1",
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
+  }
+}
