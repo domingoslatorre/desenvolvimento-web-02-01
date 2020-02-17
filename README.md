@@ -716,71 +716,40 @@ settings.json
 ```
 
 #### 4.2.10. editor.config
-....
+O EditorConfig ajuda a manter estilos de codificação consistentes para vários desenvolvedores que trabalham no mesmo projeto em vários editores e IDEs.
 
+Instalar a extensão do VS Code **EditorConfig for VS Code**
 
+.editorconfig
+```
+root = true
 
-### 4.3. Revisão Javascript
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = lf
+# editorconfig-tools is unable to ignore longs strings or urls
+max_line_length = off
+```
+#### 4.2.11. .vscode diretório
+Configurações do vscode que serão aplicadas no projeto. Pessoal de cada desenvolvedor. Não é versionada (algumas exceções)
 
-#### 4.3.1 Sintaxe e tipos
-
-```javascript
-
-// Comentário de uma linha
-
-/*
-  Comentários de
-  multiplas linhas
-*/
-
-// Declarações var, let e const
-
-// var: declara uma variável
-var x = 10;
-
-// let: declara uma variável com escopo do bloco
-let y = 20.0;
-
-if (true) {
-  let z = 30;
+```json
+{
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
+  "files.autoSave": "afterDelay",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
-
-// console.log(z); escopo de z é o bloco if
-
-// const: declara uma constante (apenas leitura) com escopo do bloco
-const a = 'Olá';
-
-// Identificadores Variaveis
-// começar com letra, _, $, caracteres subsequentes podem ser números (0-9)
-// case-sentitive
-
-let _minhaVariavel = 'nao faça isso'; // ESLint vai reclamar
-let nome_completo = 'Maria do Santos'; // ESLint vai reclamar
-
-const nomeCompleto = 'João da Silva'; // ESLint feliz =)
-
-// variáveis com declaradas com var ou let sem atribuição de valor tem valor inicial undefined
-
-let peso; // peso === undefined
-
-// Escopo de Variável
-
-// Variável global: variável declarada fora de uma função e está disponível para qualquer
-// outro bloco do documento atual
-// Antes do ECMAScript 6 (ES6) não existia declaração de bloco (let e const)
-
-
 ```
 
-#### 4.3.2 Estruturas de controle
-
-Lorem, lorem, lorem
-
-#### 4.3.3 Arrays
-
-Lorem, lorem, lorem
 
 ## Referências
 
 - https://git-scm.com/docs/git-config
 - https://docs.npmjs.com/cli-documentation/cli
+- https://editorconfig.org/
