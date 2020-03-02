@@ -75,6 +75,8 @@ settings.json
 "http.proxySupport": "on",
 "http.proxyAuthorization": null,
 "http.proxyStrictSSL": true
+ "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
+ "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 ```
 
 #### 4.1.2 Configurar indentidade no git (nome e email)
